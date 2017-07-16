@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/tile_bg"
+    android:weightSum="10"
+    android:id="@+id/mainchat"
+    tools:context="com.example.sam.anoumyouschat.ChatMain">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bấm -Xin Chào- để bắt đầu"
+        android:textAlignment="center" />
+
+    <ListView
+        android:id="@+id/list_view_messages"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@null"
+        android:divider="@null"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"></ListView>
+
+    <LinearLayout
+        android:id="@+id/chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bodertop"
+        android:padding="2dp"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/btnGetphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@android:drawable/ic_delete" />
+
+        <EditText
+            android:id="@+id/txtMsg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:background="@color/white"
+            android:hint="Tin nhắn" />
+
+
+        <ImageView
+            android:id="@+id/sendchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
+
+</LinearLayout>
